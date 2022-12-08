@@ -1,0 +1,7 @@
+.stick {
+    width: var(--line-width, 10px);
+    transform-origin: center calc(var(--line-width, 10px) / 2);
+    translate: -50% 0;
+    position: absolute;
+    background-color: black;
+}

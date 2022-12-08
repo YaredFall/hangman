@@ -1,0 +1,8 @@
+.circle {
+    position: absolute;
+    translate: -50% -50%; /* thus posX and posY is the position of the center of the circle */
+    border-radius: 100%;
+    border: var(--line-width, 10px) solid black;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+}

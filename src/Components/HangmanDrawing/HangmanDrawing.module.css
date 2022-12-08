@@ -1,0 +1,5 @@
+.hangman-drawing {
+    --line-width: 8px;
+
+    position: relative;
+}
