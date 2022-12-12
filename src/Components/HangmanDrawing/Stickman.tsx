@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 import AbsolutePosCircle from "../AbsolutePosCircle/AbsolutePosCircle";
 import AbsolutePosStick from "../AbsolutePosStick/AbsolutePosStick";
 
@@ -13,7 +13,11 @@ type StickmanProps = {
 }
 
 const Stickman:FC<StickmanProps> = ({paddingTop, setStickmanHeight}) => {
-    setStickmanHeight(paddingTop + headSize / 2 + bodyLength  + legsLength * Math.cos(Math.PI/6))
+
+    useEffect(() => {
+        setStickmanHeight(paddingTop + headSize / 2 + bodyLength  + legsLength * Math.cos(Math.PI/6))
+    }, [paddingTop]);
+
 
     return (
         <div>

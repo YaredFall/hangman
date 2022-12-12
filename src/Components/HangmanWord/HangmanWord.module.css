@@ -1,0 +1,19 @@
+.container {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.container > div {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    flex: 1 1 0;
+    justify-content: center;
+    border-bottom: 0.5rem solid;
+}

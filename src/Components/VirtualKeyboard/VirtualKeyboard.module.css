@@ -1,0 +1,14 @@
+.keyboard {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    font-size: 2rem;
+    font-weight: bold;
+    align-self: stretch;
+    text-transform: uppercase;
+}
+
+.keyboard > button {
+    text-transform: inherit;
+    padding: 0.5rem 0;
+}

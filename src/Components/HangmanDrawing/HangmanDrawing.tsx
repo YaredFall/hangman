@@ -1,23 +1,26 @@
-import React, {useState} from 'react';
-import AbsolutePosStick, {Orientation} from "../AbsolutePosStick/AbsolutePosStick";
-import AbsolutePosCircle from "../AbsolutePosCircle/AbsolutePosCircle";
+import React, {FC, useState} from 'react';
 import styles from "./HangmanDrawing.module.css"
 import Stickman from "./Stickman";
 import Stool from "./Stool";
 import Gallows from "./Gallows";
 
-const stickmanPaddingTop = 150;
+const scale = 1;
+const stickmanPaddingTop = 140;
 
-function HangmanDrawing() {
+
+type HangmanDrawingProps = {
+    drawingStage: number
+}
+
+const HangmanDrawing:FC<HangmanDrawingProps> = ({drawingStage}) => {
 
     const [stickmanHeight, setStickmanHeight] = useState(0);
 
-
     return (
-        <div className={styles["hangman-drawing"]} style={{scale: "0.9"}}>
-            <Stickman paddingTop={stickmanPaddingTop} setStickmanHeight={setStickmanHeight} />
-            <Stool marginTop={stickmanHeight} />
-            <Gallows marginTop={stickmanPaddingTop + 230} />
+        <div className={styles["hangman-drawing"]} style={{scale: `${scale}`, height: `${(stickmanPaddingTop + 230)*scale + 40}px`}}>
+            <Stickman paddingTop={stickmanPaddingTop * scale} setStickmanHeight={setStickmanHeight} />
+            <Stool marginTop={stickmanHeight} className={drawingStage > 6 ? styles.removed : ""}/>
+            <Gallows marginTop={stickmanPaddingTop * scale + 230} drawingStage={drawingStage}/>
         </div>
     );
 }
