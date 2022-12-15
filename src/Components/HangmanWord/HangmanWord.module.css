@@ -5,7 +5,7 @@
     text-transform: uppercase;
     display: flex;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
     user-select: none;
 }
@@ -21,10 +21,4 @@
 
 .container .revealed {
     color: var(--cancel-color, rgba(240, 128, 128, 0.7));
-}
-
-@media (max-width: 769px) {
-    .container {
-        font-size: 3.5rem;
-    }
 }

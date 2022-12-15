@@ -27,5 +27,9 @@
     .keyboard {
         font-size: 1.5rem;
     }
+
+    .keyboard > button {
+        padding: 1.5rem 0;
+    }
 }
 
