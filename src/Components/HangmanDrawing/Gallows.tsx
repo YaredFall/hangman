@@ -3,8 +3,8 @@ import AbsolutePosStick from "../AbsolutePosStick/AbsolutePosStick";
 
 const baseWidth = 200
 const gallowsWidth = 500
-const gallowsHeight = 340
-const ropeLength = 80
+const gallowsHeight = 310
+const ropeLength = gallowsHeight - 260 //should be dynamic stickman height instead of hardcoded 260px
 
 type GallowsProps = {
     marginTop: number
