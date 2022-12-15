@@ -39,7 +39,7 @@ function App() {
 
 
     return (
-    <div className="App">
+    <main className="App">
         <h1 children={"HANGMAN"} />
         <h4 children={
             isWon ? "You did it!" :
@@ -53,7 +53,7 @@ function App() {
                          inactiveKeys={guessedLetters}
                          disabled={isLose || isWon}
         />
-    </div>
+    </main>
   )
 }
 
