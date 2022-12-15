@@ -1,7 +1,7 @@
 .keyboard {
     display: grid;
     gap: 0.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(4ch, 4.5ch));
+    grid-template-columns: repeat(auto-fit, minmax(3ch, 4.5ch));
     font-size: 2rem;
     font-weight: bold;
     align-self: stretch;
@@ -21,3 +21,10 @@
 .keyboard > button.highlighted {
     background-color: var(--accent-color, rgba(144, 238, 144, 0.70));
 }
+
+@media (max-width: 769px) {
+    .keyboard {
+        font-size: 1.5rem;
+    }
+}
+
